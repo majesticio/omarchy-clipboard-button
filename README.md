@@ -9,8 +9,10 @@ database, or competing overlay.
 ## Features
 
 - One-click access to Omarchy's stock clipboard history.
-- Theme-aware symbolic icon that follows the active bar foreground color.
-- HiDPI-aware rendering and horizontal or vertical bar compatibility.
+- Native Nerd Font glyph drawn by the stock bar icon button: same size, colour
+  and hinting as the other bar icons, and it follows the active theme.
+- Stays sharp at fractional display scales, and works on horizontal and
+  vertical bars.
 - Accessible button label and the stock `Super+Ctrl+V` shortcut in its tooltip.
 - No external dependencies, network access, elevated privileges, or stored data.
 
@@ -18,6 +20,7 @@ database, or competing overlay.
 
 - Omarchy 4 (Quattro) with `omarchy-shell`.
 - The built-in `omarchy.clipboard` plugin enabled (the Omarchy default).
+- A Nerd Font as the bar font (the Omarchy default).
 
 ## Install
 
@@ -59,8 +62,8 @@ asking the running Omarchy shell to toggle the built-in `omarchy.clipboard`
 overlay. It ships no executable helper, installer, service, or remote code.
 
 Like every Omarchy shell plugin, its QML executes with your user permissions.
-Review the three runtime files before enabling it: `manifest.json`,
-`BarWidget.qml`, and `icon.svg`.
+Review the two runtime files before enabling it: `manifest.json` and
+`BarWidget.qml`.
 
 ## Development
 
@@ -80,5 +83,5 @@ qs log -p "$OMARCHY_PATH/shell" --tail 100
 
 ## License
 
-MIT. The clipboard icon is original project artwork and is covered by the same
-license.
+MIT. The icon is the Nerd Fonts Material Design glyph `nf-md-clipboard_text`,
+drawn from the bar font, so no image asset is shipped.
